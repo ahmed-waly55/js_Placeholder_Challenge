@@ -4,6 +4,7 @@ function getUsers() {
     request.open("GET", "https://jsonplaceholder.typicode.com/users", true);
     request.responseType = "json";
     request.send();
+    document.getElementById("sidbar").innerHTML = '';
     request.onload = function () {
         if (request.status >= 200 && request.status < 300) {
             let users = request.response;
